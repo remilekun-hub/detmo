@@ -16,7 +16,7 @@ interface SettingsProps {}
 
 const Settings: FC<SettingsProps> = ({}) => {
 	return (
-		<div className="bg-[#F6F6F6] p-4 lg:gap-6 lg:p-6">
+		<div className="bg-[#F6F6F6] p-4 lg:gap-6 lg:p-6 h-full">
 			<Breadcrumb>
 				<BreadcrumbList>
 					<BreadcrumbItem>
