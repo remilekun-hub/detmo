@@ -15,7 +15,7 @@ interface SpendAnalysisProps {}
 
 const SpendAnalysis: FC<SpendAnalysisProps> = ({}) => {
   return (
-    <>
+    <div className="w-full">
       <Breadcrumb className=" ">
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -67,7 +67,7 @@ const SpendAnalysis: FC<SpendAnalysisProps> = ({}) => {
           count={12000}
         />
       </div>
-    </>
+    </div>
   );
 };
 
