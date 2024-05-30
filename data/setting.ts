@@ -22,40 +22,43 @@ export const generalTabData = {
 
 //  users tab data
 //  columns for users ( name, email, permission )
-export const usersTabData = {
-	users: [
-		{
-			name: "John Doe",
-			email: "JWJpK@example.com",
-			permission: "user",
-		},
-		{
-			name: "Jane Doe",
-			email: "JWJpK@example.com",
-			permission: "admin",
-		},
-		{
-			name: "John Doe",
-			email: "JWJpK@example.com",
-			permission: "user",
-		},
-		{
-			name: "Jane Doe",
-			email: "JWJpK@example.com",
-			permission: "admin",
-		},
-		{
-			name: "John Doe",
-			email: "JWJpK@example.com",
-			permission: "user",
-		},
-		{
-			name: "Jane Doe",
-			email: "JWJpK@example.com",
-			permission: "admin",
-		},
-	],
-};
+export const usersTabData = [
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+];
 
 // Billing tab data
 //  columns for billing (Date , description, amount ,status )

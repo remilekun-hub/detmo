@@ -1,6 +1,7 @@
 "use client";
 import GeneralSettings from "@/components/dashboard/settings/general/generalmaincontent";
 import Tabmenu from "@/components/dashboard/settings/tabmenu";
+import UsersContent from "@/components/dashboard/settings/users/userscontent";
 import {
 	Breadcrumb,
 	BreadcrumbItem,
@@ -12,11 +13,13 @@ import {
 
 import { FC } from "react";
 
-interface SettingsProps {}
+interface UsersProps {}
 
-const Settings: FC<SettingsProps> = ({}) => {
+
+
+const Users: FC<UsersProps> = ({}) => {
 	return (
-		<div className="bg-[#F6F6F6] p-4 lg:gap-6 lg:p-6 h-full w-full">
+		<div className="bg-[#F6F6F6] p-4 lg:gap-6 lg:p-6 min-h-screen w-full">
 			<Breadcrumb>
 				<BreadcrumbList>
 					<BreadcrumbItem>
@@ -33,20 +36,20 @@ const Settings: FC<SettingsProps> = ({}) => {
 					</BreadcrumbItem>
 					<BreadcrumbItem>
 						<BreadcrumbPage className="text-[16px] font-[400]">
-							General
+							User
 						</BreadcrumbPage>
 					</BreadcrumbItem>
 				</BreadcrumbList>
 			</Breadcrumb>
 
-			<h1 className="mt-4 mb-7 text-[32px] font-[700]">General</h1>
+			<h1 className="mt-4 mb-7 text-[32px] font-[700]">User</h1>
 
 			<main className="bg-white w-full h-full rounded-t-[12px] rounded-b-[12px]">
 				<Tabmenu />
-				<GeneralSettings />
+				<UsersContent />
 			</main>
 		</div>
 	);
 };
 
-export default Settings;
+export default Users;

@@ -45,7 +45,7 @@ const Tabmenu: FC<Props> = ({}) => {
 				href="/dashboard/settings/refer"
 				className={cn(
 					"flex items-center py-2 text-muted-foreground/70 transition-all hover:text-primary text-[16px]",
-					pathname === "/dashboard/settings/users" &&
+					pathname === "/dashboard/settings/refer" &&
 						"text-primary text-black font-[500] border-b-primary border-b-[2px]"
 				)}
 			>
