@@ -1,4 +1,3 @@
-import GeneralSettings from "@/components/dashboard/settings/general/generalmaincontent";
 import Tabmenu from "@/components/dashboard/settings/tabmenu";
 import UsersContent from "@/components/dashboard/settings/users/userscontent";
 import {
