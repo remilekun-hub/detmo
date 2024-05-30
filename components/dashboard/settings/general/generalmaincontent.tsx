@@ -1,3 +1,4 @@
+'use client'
 import { FC } from "react";
 import { generalTabData } from "@/data/setting";
 import CompanydisplayName from "./displayname";

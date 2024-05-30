@@ -1,6 +1,5 @@
-import GeneralSettings from "@/components/dashboard/settings/general/generalmaincontent";
+import BillingContent from "@/components/dashboard/settings/billing/billingcontent";
 import Tabmenu from "@/components/dashboard/settings/tabmenu";
-import UsersContent from "@/components/dashboard/settings/users/userscontent";
 import {
 	Breadcrumb,
 	BreadcrumbItem,
@@ -12,11 +11,9 @@ import {
 
 import { FC } from "react";
 
-interface UsersProps {}
+interface BillingProps {}
 
-
-
-const Users: FC<UsersProps> = ({}) => {
+const Billing: FC<BillingProps> = ({}) => {
 	return (
 		<div className="bg-[#F6F6F6] p-4 lg:gap-6 lg:p-6 min-h-screen w-full">
 			<Breadcrumb>
@@ -35,20 +32,20 @@ const Users: FC<UsersProps> = ({}) => {
 					</BreadcrumbItem>
 					<BreadcrumbItem>
 						<BreadcrumbPage className="text-[16px] font-[400]">
-							User
+							Billing
 						</BreadcrumbPage>
 					</BreadcrumbItem>
 				</BreadcrumbList>
 			</Breadcrumb>
 
-			<h1 className="mt-4 mb-7 text-[32px] font-[700]">User</h1>
+			<h1 className="mt-4 mb-7 text-[32px] font-[700]">Billing</h1>
 
 			<main className="bg-white w-full h-full rounded-t-[12px] rounded-b-[12px]">
 				<Tabmenu />
-				<UsersContent />
+				<BillingContent />
 			</main>
 		</div>
 	);
 };
 
-export default Users;
+export default Billing;

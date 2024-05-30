@@ -89,6 +89,7 @@ export function DataTable<TData, TValue>({
 											cell.column.columnDef.cell,
 											cell.getContext()
 										)}
+										
 									</TableCell>
 								))}
 							</TableRow>

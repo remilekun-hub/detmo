@@ -62,28 +62,32 @@ export const usersTabData = [
 
 // Billing tab data
 //  columns for billing (Date , description, amount ,status )
-export const billingTabData = {
-	billing: [
-		{
-			date: "2022-01-01",
-			description: "Payment for subscription",
-			amount: "$100.00",
-			status: "paid",
-		},
-		{
-			date: "2022-01-01",
-			description: "Payment for subscription",
-			amount: "$100.00",
-			status: "paid",
-		},
-		{
-			date: "2022-01-01",
-			description: "Payment for subscription",
-			amount: "$100.00",
-			status: "paid",
-		},
-	],
-};
+export const billingTabData = [
+	{
+		date: "Fri 19 Jun, 2020 09:35 am",
+		description: "Payment for subscription",
+		amount: "$100.00",
+		status: "paid",
+	},
+	{
+		date: "Wed 17 Jun, 2020 07:39 am",
+		description: "Payment for subscription",
+		amount: "$100.00",
+		status: "paid",
+	},
+	{
+		date: "Thu 11 Jun, 2020 02:22 am",
+		description: "Payment for subscription",
+		amount: "$100.00",
+		status: "paid",
+	},
+	{
+		date: "Thu 11 Jun, 2020 02:22 am",
+		description: "Payment for subscription",
+		amount: "$100.00",
+		status: "paid",
+	},
+];
 
 // refer tab
 export const referTabData = {

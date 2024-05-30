@@ -1,8 +1,8 @@
+'use client'
 import { FC } from "react";
-import { generalTabData, usersTabData } from "@/data/setting";
+import { usersTabData } from "@/data/setting";
 import { ColumnDef } from "@tanstack/react-table";
 import { DataTable } from "@/components/datatable";
-import { Button } from "@/components/ui/button";
 import { Trash2 } from "lucide-react";
 
 interface Props {}
@@ -84,7 +84,7 @@ export const usersColumn: ColumnDef<usersTabData>[] = [
 
 const UsersContent: FC<Props> = ({}) => {
 	return (
-		<div className="p-4 lg:p-7 lg:lg:px-10 xl:px-20  max-w-[1400px]">
+		<div className="p-4 lg:p-7 lg:lg:px-10 xl:px-20  max-w-[1400px] lg:pt-[40px]">
 			<DataTable columns={usersColumn} data={usersTabData} />
 		</div>
 	);

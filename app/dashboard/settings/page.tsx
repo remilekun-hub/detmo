@@ -1,4 +1,3 @@
-"use client";
 import GeneralSettings from "@/components/dashboard/settings/general/generalmaincontent";
 import Tabmenu from "@/components/dashboard/settings/tabmenu";
 import {
