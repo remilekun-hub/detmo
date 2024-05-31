@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Menu, Package,SettingsIcon } from "lucide-react";
+import { Menu, Package, SettingsIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -18,19 +18,18 @@ import SearchBox from "@/components/dashboard/searchbox";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Sidebar from "@/components/dashboard/sidebar";
-import {Toaster} from "react-hot-toast"
+import { Toaster } from "react-hot-toast";
 
 export default function Dashboard({ children }: { children: React.ReactNode }) {
 	const pathname = usePathname();
 
 	return (
 		<section className="relative">
-		
 			<Sidebar />
-		
+
 			<main className="flex flex-1 flex-col lg:ml-[280px]">
-        <Toaster />
-        
+				<Toaster />
+
 				<header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6 sticky top-0 z-[3]">
 					<Sheet>
 						<SheetTrigger asChild>
@@ -108,7 +107,15 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
 					<div className="w-full flex-1">
 						<SearchBox />
 					</div>
-					<UserButton />{" "}
+
+					<div className="flex items-center gap-4 sm:gap-8 md:gap-9">
+						<Link href="/dashboard/projects/create" className="hidden sm:block">
+							<Button size="lg" className="bg-[#6649B6]">
+								New sourcing project
+							</Button>
+						</Link>
+						<UserButton />{" "}
+					</div>
 				</header>
 				{children}
 			</main>
