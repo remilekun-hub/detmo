@@ -34,15 +34,22 @@ import {
 	ChevronsLeft,
 	ChevronsRight,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface DataTableProps<TData, TValue> {
 	columns: ColumnDef<TData, TValue>[];
 	data: TData[];
+	rowStyle?:string
+	headerStyle?:string,
+	buttonWrapper?:string
 }
 
 export function DataTable<TData, TValue>({
 	columns,
 	data,
+	rowStyle,
+	headerStyle,
+	buttonWrapper,
 }: DataTableProps<TData, TValue>) {
 	const table = useReactTable({
 		data,
@@ -57,7 +64,7 @@ export function DataTable<TData, TValue>({
 	return (
 		<div className="">
 			<Table>
-				<TableHeader className="bg-[#F6F6F6] h-[34px]">
+				<TableHeader className={cn('bg-[#F6F6F6] h-[34px]', headerStyle && headerStyle)}>
 					{table.getHeaderGroups().map((headerGroup) => (
 						<TableRow key={headerGroup.id}>
 							{headerGroup.headers.map((header) => {
@@ -81,7 +88,7 @@ export function DataTable<TData, TValue>({
 							<TableRow
 								key={row.id}
 								data-state={row.getIsSelected() && "selected"}
-								className="h-[63px]"
+								className={cn('h-[63px]', rowStyle && rowStyle)}
 							>
 								{row.getVisibleCells().map((cell) => (
 									<TableCell key={cell.id}>
@@ -89,6 +96,8 @@ export function DataTable<TData, TValue>({
 											cell.column.columnDef.cell,
 											cell.getContext()
 										)}
+
+										
 										
 									</TableCell>
 								))}
@@ -107,7 +116,7 @@ export function DataTable<TData, TValue>({
 				</TableBody>
 			</Table>
 
-			<div className="flex items-center justify-center md:justify-end flex-wrap gap-2 my-8">
+			<div className={cn('flex items-center justify-center md:justify-end flex-wrap gap-2 my-8', buttonWrapper && buttonWrapper)}>
 				<Button
 					variant={"secondary"}
 					className="border rounded px-3"
@@ -166,7 +175,7 @@ export function DataTable<TData, TValue>({
 					value={table.getState().pagination.pageSize.toString()}
 					onValueChange={handleChange}
 				>
-					<SelectTrigger className="w-[180px]">
+					<SelectTrigger className="w-[120px]">
 						<SelectValue placeholder="Page size" />
 					</SelectTrigger>
 					<SelectContent className="">

@@ -43,7 +43,7 @@ export default function SearchBox() {
         <Button
           variant={"outline"}
           onClick={() => setOpen(true)}
-          className="md:min-w-44 md:w-1/3 justify-start px-2 py-4"
+          className="md:min-w-44 md:w-1/3 justify-start px-2 py-4 bg-[#F6F6F6]"
           size="lg"
         >
           <SearchIcon className=" size-4" />

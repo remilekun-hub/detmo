@@ -58,6 +58,110 @@ export const usersTabData = [
 		email: "JWJpK@example.com",
 		permission: "user",
 	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
+	{
+		name: "Jane Doe",
+		email: "JWJpK@example.com",
+		permission: "admin",
+	},
+	{
+		name: "John Doe",
+		email: "JWJpK@example.com",
+		permission: "user",
+	},
 ];
 
 // Billing tab data

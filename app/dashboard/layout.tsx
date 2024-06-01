@@ -30,7 +30,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
 			<main className="flex flex-1 flex-col lg:ml-[280px]">
 				<Toaster />
 
-				<header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6 sticky top-0 z-[3]">
+				<header className="flex h-14 items-center gap-4 border-b bg-white px-4 lg:h-[60px] lg:px-6 sticky top-0 z-[3]">
 					<Sheet>
 						<SheetTrigger asChild>
 							<Button

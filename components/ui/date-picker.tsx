@@ -16,9 +16,15 @@ import { cn } from "@/lib/utils";
 export default function DatePickerComponent({
   dateValue,
   onDateChange,
+  placeholder='Pick a date',
+  style,
+  icon
 }: {
-  dateValue: Date | undefined;
+  dateValue?: Date | undefined;
   onDateChange: (date: Date | undefined) => void;
+  placeholder?:string;
+  style?:string;
+  icon?:boolean
 }) {
   const [date, setDate] = React.useState<Date>(dateValue ?? new Date());
 
@@ -29,11 +35,12 @@ export default function DatePickerComponent({
           variant={"outline"}
           className={cn(
             " justify-start text-left font-normal",
-            !date && "text-muted-foreground"
+            !date && "text-muted-foreground",
+            style && style
           )}
         >
-          {date ? format(date, "PPP") : <span>Pick a date</span>}
-          <ChevronDown className="ml-2 h-4 w-4" />
+          {date ? format(date, "PPP") : <span>{placeholder}</span>}
+          {icon && <ChevronDown className="ml-2 h-4 w-4" />}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">
