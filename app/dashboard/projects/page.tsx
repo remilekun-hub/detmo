@@ -21,7 +21,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			accessorKey: "date",
 			header: () => {
 				return (
-					<div className="text-[15px] font-[700] text-[#8A8A8A] pl-8">
+					<div className="text-[14px] font-[700] text-[#8A8A8A] pl-8">
 						Project name
 					</div>
 				);
@@ -30,10 +30,10 @@ const Projects: FC<ProjectsProps> = ({}) => {
 				const data = row.original;
 				return (
 					<div className="pl-8">
-						<h1 className="text-black font-[700] text-[15px] mb-1">
+						<h1 className="text-[#121212] font-[700] text-[15px] mb-1">
 							{data.name}
 						</h1>
-						<p className="text-[13px] font-[400] text-[#8A8A8A]">
+						<p className="text-[12px] font-[400] text-[#8A8A8A]">
 							{data.createdat}
 						</p>
 					</div>
@@ -44,7 +44,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			accessorKey: "status",
 			header: () => {
 				return (
-					<div className="text-[15px] font-[700] text-[#8A8A8A]">
+					<div className="text-[14px] font-[700] text-[#8A8A8A]">
 						Status
 					</div>
 				);
@@ -77,7 +77,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			accessorKey: "cost",
 			header: () => {
 				return (
-					<div className="text-[15px] font-[700] text-[#8A8A8A]">
+					<div className="text-[14px] font-[700] text-[#8A8A8A]">
 						Cost Savings
 					</div>
 				);
@@ -85,7 +85,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			cell: ({ row }) => {
 				const data = row.original;
 				return (
-					<div className="font-[600] text-[15px] text-black">
+					<div className="font-[600] text-[15px] text-[#3B3C41]">
 						{data.cost}
 					</div>
 				);
@@ -95,7 +95,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			accessorKey: "affected",
 			header: () => {
 				return (
-					<div className="text-[15px] font-[700] text-[#8A8A8A]">
+					<div className="text-[14px] font-[700] text-[#8A8A8A]">
 						Affected Customers
 					</div>
 				);
@@ -103,7 +103,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			cell: ({ row }) => {
 				const data = row.original;
 				return (
-					<div className="font-[500] text-[15px] text-black">
+					<div className="font-[500] text-[15px] text-[#3B3C41]">
 						{data.affected}
 					</div>
 				);
@@ -113,7 +113,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			accessorKey: "part",
 			header: () => {
 				return (
-					<div className="text-[15px] font-[700] text-[#8A8A8A]">
+					<div className="text-[14px] font-[700] text-[#8A8A8A]">
 						Part # & Description
 					</div>
 				);
@@ -122,10 +122,10 @@ const Projects: FC<ProjectsProps> = ({}) => {
 				const data = row.original;
 				return (
 					<div>
-						<h1 className="text-black font-[700] text-[15px] mb-1">
+						<h1 className="text-[#3B3C41] font-[600] text-[14px] mb-1">
 							{data.part}
 						</h1>
-						<p className="text-[14px] font-[500] text-[#8A8A8A]">
+						<p className="text-[14px] font-[400] text-[#8A8A8A]">
 							{data.description}
 						</p>
 					</div>
@@ -136,7 +136,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			accessorKey: "sponsor",
 			header: () => {
 				return (
-					<div className="text-[15px] font-[700] text-[#8A8A8A]">
+					<div className="text-[14px] font-[700] text-[#8A8A8A]">
 						Project Sponsor
 					</div>
 				);
@@ -144,7 +144,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			cell: ({ row }) => {
 				const data = row.original;
 				return (
-					<div className="font-[500] text-[15px] text-black">
+					<div className="font-[400] text-[14px] text-[#3B3C41]">
 						{data.sponsor}
 					</div>
 				);
@@ -159,7 +159,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 				return (
 					<Link
 						href={`/dashboard/projects/${data.id}`}
-						className="text-[12px] font-[500]"
+						className="text-[14px] font-[500] text-[#3B3C41]"
 					>
 						Details
 					</Link>
@@ -186,7 +186,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 				</BreadcrumbList>
 			</Breadcrumb>
 
-			{/* <h1 className="mt-4 mb-7 text-[32px] font-[700]">All Projects</h1>
+			<h1 className="mt-4 mb-7 text-[32px] font-[700]">All Projects</h1>
 
 			<main className="bg-transparent w-full h-full">
 				<DataTable
@@ -196,7 +196,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 					headerStyle="h-[70px] border-0"
 					buttonWrapper="bg-white my-4 h-[85px] px-5"
 				/>
-			</main> */}
+			</main>
 		</div>
 	);
 };

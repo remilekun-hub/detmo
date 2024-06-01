@@ -50,7 +50,7 @@ export const usersColumn: ColumnDef<usersTabData>[] = [
 		cell: ({ row }) => {
 			const data = row.original;
 			return (
-				<div className="font-[700] text-[14px] text-[#3B3C41]/50">
+				<div className="font-[400] text-[14px] text-[#3B3C41]">
 					{data.email}
 				</div>
 			);
@@ -68,7 +68,7 @@ export const usersColumn: ColumnDef<usersTabData>[] = [
 		cell: ({ row }) => {
 			const data = row.original;
 			return (
-				<div className="font-[700] text-[14px] text-[#3B3C41]/50">
+				<div className="font-[400] text-[14px] text-[#3B3C41]">
 					{data.permission}
 				</div>
 			);
