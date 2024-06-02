@@ -12,10 +12,13 @@ import { ColumnDef } from "@tanstack/react-table";
 import { projectType, projects } from "@/data/projects";
 import { DataTable } from "@/components/datatable";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 
 interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = ({}) => {
+	const data = 1;
 	const proectColumn: ColumnDef<projectType>[] = [
 		{
 			accessorKey: "date",
@@ -189,13 +192,34 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			<h1 className="mt-4 mb-7 text-[32px] font-[700]">All Projects</h1>
 
 			<main className="bg-transparent w-full h-full">
-				<DataTable
-					columns={proectColumn}
-					data={projects}
-					rowStyle="bg-white border-b-[10px] border-b-[#F6F6F6] h-[82px] cursor-pointer"
-					headerStyle="h-[70px] border-0"
-					buttonWrapper="bg-white my-4 h-[85px] px-5"
-				/>
+				{data > 0 ? (
+					<DataTable
+						columns={proectColumn}
+						data={projects}
+						rowStyle="bg-white border-b-[10px] border-b-[#F6F6F6] h-[82px] cursor-pointer"
+						headerStyle="h-[70px] border-0"
+						buttonWrapper="bg-white my-4 h-[85px] px-5"
+					/>
+				) : (
+					<div className="w-full h-full flex justify-center">
+						<div className="pt-14 sm:pt-[80px]">
+							<h1 className="text-[15px] font-[400] text-[#3B3C41] text-center mb-10">
+								There are no projects.
+							</h1>
+							<Link href={"/dashboard/projects/create"}>
+								<Button
+									variant={"default"}
+									className="bg-[#6649B6] px-5 text-[14px] font-[400]"
+								>
+									<span className="mr-[20px] border-[2px] rounded-[6px] p-0.5 border-white">
+										<Plus size={13} color="#fff" />
+									</span>
+									Create new sourcing project
+								</Button>
+							</Link>
+						</div>
+					</div>
+				)}
 			</main>
 		</div>
 	);
