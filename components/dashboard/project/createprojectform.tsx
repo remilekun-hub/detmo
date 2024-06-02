@@ -28,6 +28,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Plus } from "lucide-react";
+import Link from "next/link";
 
 export default function Createprojectform() {
 	const [sourcingTeam, setSourcingTeam] = useState(false);
@@ -352,13 +353,15 @@ export default function Createprojectform() {
 				>
 					Save as draft
 				</Button>
-				<Button
-					variant={"default"}
-					className="h-[38px] text-[14px] font-[500]"
-					disabled
-				>
-					Evaluate Suppliers
-				</Button>
+				<Link href={"/dashboard/projects/create/evaluate-suppliers"}>
+					<Button
+						variant={"default"}
+						className="h-[38px] text-[14px] font-[500]"
+						// disabled
+					>
+						Evaluate Suppliers
+					</Button>
+				</Link>
 			</div>
 		</div>
 	);

@@ -9,6 +9,19 @@ export type projectType = {
 	description: string;
 	sponsor: string;
 };
+export type supplierEvaluationType = {
+	id: string;
+	name: string;
+	location: string;
+	company_size: string;
+	critical_parts: string;
+	non_critical_parts: string;
+	revenue: string;
+	on_time_delivery: string;
+	supplier_health: string;
+	order_fulfillment_rate: string;
+	average_annual_rd: string;
+};
 
 export const projects: projectType[] = [
 	{
@@ -16,145 +29,290 @@ export const projects: projectType[] = [
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "red",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "2",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "green",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  
-  {
+
+	{
 		id: "3",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "yellow",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "4",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "red",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "5",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "yellow",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "6",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "red",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "7",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "red",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "8",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "yellow",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "9",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "red",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "10",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "green",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "11",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "yellow",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "12",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "green",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  {
+	{
 		id: "13",
 		name: "Project A",
 		createdat: "Created 6 days ago",
 		status: "red",
-    cost:"$250.00",
+		cost: "$250.00",
 		affected: "Khaitan",
-    part:'08-2682N622-28',
-    description:"heater",
-    sponsor:"abhishek@adfadf.com"
+		part: "08-2682N622-28",
+		description: "heater",
+		sponsor: "abhishek@adfadf.com",
 	},
-  
+];
 
+export const suplierEvaluation: supplierEvaluationType[] = [
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "1",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "2",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "3",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "4",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "5",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "6",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "7",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "8",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "9",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "10",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	{
+		average_annual_rd: "1 - NO R&D",
+		company_size: "1 - 50 - 100",
+		critical_parts: "	1 - 50 - 100",
+		id: "11",
+		location: "1 - intercontinental",
+		name: "Supplier name",
+		non_critical_parts: "1 - 50 - 100",
+		on_time_delivery: "1 - 0% - 20%",
+		order_fulfillment_rate: "1 - 0% - 20%",
+		revenue: "1 - $0 - $1M",
+		supplier_health: "1 - 0% - 20%",
+	},
+	
 ];

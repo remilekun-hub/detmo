@@ -44,7 +44,7 @@ const Step: FC<Props> = ({}) => {
 					<span className="flex justify-center items-center bg-[#CEEFFB] size-6 rounded-full mr-3 text-white text-[18px] font-[700]">
 						5
 					</span>
-					Control
+					Closure
 				</div>
 			</div>
 		</div>

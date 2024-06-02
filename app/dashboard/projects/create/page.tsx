@@ -12,8 +12,6 @@ const CreateProject: FC<Props> = ({}) => {
 						Create new sourcing project
 					</h1>
 				</div>
-
-				
 			</div>
 			<Createprojectform />
 		</section>
