@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { Check } from "lucide-react";
 import avatar from "../../../../public/Ellipse 123.png";
 import guy from "../../../../public/guy.png";
 import Image from "next/image";
