@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -27,8 +27,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Plus } from "lucide-react";
 
 export default function Createprojectform() {
+	const [sourcingTeam, setSourcingTeam] = useState(false);
 	const formSchema = z.object({
 		name: z.string().min(1, {
 			message: "project name must be at least 1 characters.",
@@ -50,7 +52,6 @@ export default function Createprojectform() {
 
 	return (
 		<div>
-			
 			<div className="bg-white rounded-[20px] px-4 md:px-10 lg:px-[80px] py-[35px] mb-12 max-w-[1400px] mx-auto">
 				<div>
 					<div className="flex items-center gap-4">
@@ -101,24 +102,10 @@ export default function Createprojectform() {
 													<SelectValue placeholder="Select an option" />
 												</SelectTrigger>
 												<SelectContent>
-													<SelectGroup>
-														<SelectLabel>Fruits</SelectLabel>
-														<SelectItem value="Every quater">
-															Every quater
-														</SelectItem>
-														<SelectItem value="banana">
-															Banana
-														</SelectItem>
-														<SelectItem value="blueberry">
-															Blueberry
-														</SelectItem>
-														<SelectItem value="grapes">
-															Grapes
-														</SelectItem>
-														<SelectItem value="pineapple">
-															Pineapple
-														</SelectItem>
-													</SelectGroup>
+													<SelectItem value="USD">usd</SelectItem>
+													<SelectItem value="EURO">
+														euro
+													</SelectItem>
 												</SelectContent>
 											</Select>
 										</div>
@@ -141,15 +128,15 @@ export default function Createprojectform() {
 										</Button>
 										<Button
 											variant={"secondary"}
-											className="text-[#BFBFBF] py-7 bg-[#F6F6F6]"
-											disabled
+											className="text-[#BFBFBF] py-7 bg-[hsl(0,0%,96%)]"
+											// disabled
 										>
 											Dual Sourcing
 										</Button>
 										<Button
 											variant={"secondary"}
-											className="text-[#BFBFBF] py-7 bg-[#F6F6F6]"
-											disabled
+											className="text-[#BFBFBF] py-7 bg-[hsl(0,0%,96%)]"
+											// disabled
 										>
 											Dual Sourcing
 										</Button>
@@ -206,9 +193,11 @@ export default function Createprojectform() {
 												<SelectValue placeholder="Chose a status" />
 											</SelectTrigger>
 											<SelectContent>
-												<SelectGroup>
-													<SelectItem value="Red">Red</SelectItem>
-												</SelectGroup>
+												<SelectItem value="red">Red</SelectItem>
+												<SelectItem value="green">Green</SelectItem>
+												<SelectItem value="yellow">
+													Yellow
+												</SelectItem>
 											</SelectContent>
 										</Select>
 									</FormItem>
@@ -268,75 +257,109 @@ export default function Createprojectform() {
 									</h1>
 								</div>
 
-								<div className="flex flex-col sm:flex-row gap-3 md:gap-8">
-									<FormItem className="w-full sm:w-1/2">
-										<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
-											Sourcing PM
-										</FormLabel>
-										<Input
-											placeholder="shikh@fjgj.com"
-											className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
-										/>
-									</FormItem>
-									<FormItem className="w-full sm:w-1/2">
-										<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
-											SCM manager
-										</FormLabel>
-										<Input
-											placeholder="shikh@fjgj.com"
-											className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
-										/>
-									</FormItem>
-								</div>
-								<div className="flex flex-col sm:flex-row gap-3 md:gap-8">
-									<FormItem className="w-full sm:w-1/2">
-										<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
-											Selected supplier PM
-										</FormLabel>
-										<Input
-											placeholder="shikh@fjgj.com"
-											className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
-										/>
-									</FormItem>
-									<FormItem className="w-full sm:w-1/2">
-										<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
-											Buyer
-										</FormLabel>
-										<Input
-											placeholder="shikh@fjgj.com"
-											className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
-										/>
-									</FormItem>
-								</div>
-								<div className="flex flex-col sm:flex-row gap-3 md:gap-8">
-									<FormItem className="w-full sm:w-1/2">
-										<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
-											Project Sponsor
-										</FormLabel>
-										<Input
-											placeholder="shikh@fjgj.com"
-											className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
-										/>
-									</FormItem>
-									<FormItem className="w-full sm:w-1/2">
-										<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
-											Finance POC
-										</FormLabel>
-										<Input
-											placeholder="shikh@fjgj.com"
-											className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
-										/>
-									</FormItem>
-								</div>
+								{sourcingTeam && (
+									<>
+										<div className="flex flex-col sm:flex-row gap-3 md:gap-8">
+											<FormItem className="w-full sm:w-1/2">
+												<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
+													Sourcing PM
+												</FormLabel>
+												<Input
+													placeholder="shikh@fjgj.com"
+													className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
+												/>
+											</FormItem>
+											<FormItem className="w-full sm:w-1/2">
+												<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
+													SCM manager
+												</FormLabel>
+												<Input
+													placeholder="shikh@fjgj.com"
+													className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
+												/>
+											</FormItem>
+										</div>
+										<div className="flex flex-col sm:flex-row gap-3 md:gap-8">
+											<FormItem className="w-full sm:w-1/2">
+												<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
+													Selected supplier PM
+												</FormLabel>
+												<Input
+													placeholder="shikh@fjgj.com"
+													className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
+												/>
+											</FormItem>
+											<FormItem className="w-full sm:w-1/2">
+												<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
+													Buyer
+												</FormLabel>
+												<Input
+													placeholder="shikh@fjgj.com"
+													className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
+												/>
+											</FormItem>
+										</div>
+										<div className="flex flex-col sm:flex-row gap-3 md:gap-8">
+											<FormItem className="w-full sm:w-1/2">
+												<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
+													Project Sponsor
+												</FormLabel>
+												<Input
+													placeholder="shikh@fjgj.com"
+													className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
+												/>
+											</FormItem>
+											<FormItem className="w-full sm:w-1/2">
+												<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
+													Finance POC
+												</FormLabel>
+												<Input
+													placeholder="shikh@fjgj.com"
+													className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
+												/>
+											</FormItem>
+										</div>
+									</>
+								)}
 
-								<Button type="submit">Submit</Button>
+								<Button
+									variant={"secondary"}
+									size={"lg"}
+									className="text-[14px] font-[600] text-[#121212] h-[44px] bg-[#EBEBEB]"
+									onClick={() => setSourcingTeam(true)}
+								>
+									<span className="mr-2 border-[2px] rounded-[6px] p-0.5 border-black">
+										<Plus size={12} />
+									</span>
+									Add sourcing team
+								</Button>
 							</form>
 						</Form>
 					</div>
 				</div>
 			</div>
 
-			<div className="bg-red-900 h-[50px] ">rgrj</div>
+			<div className="bg-white py-[25px] flex items-center flex-wrap justify-end gap-5 px-4 md:pr-6">
+				<Button
+					variant={"secondary"}
+					className="h-[38px] text-[14px] font-[500] px-10"
+				>
+					Cancel
+				</Button>
+				<Button
+					variant={"outline"}
+					className="h-[38px] border-primary text-[14px] text-primary font-[500]"
+				>
+					Save as draft
+				</Button>
+				<Button
+					variant={"default"}
+					className="h-[38px] text-[14px] font-[500]"
+					disabled
+				>
+					Evaluate Suppliers
+				</Button>
+			</div>
 		</div>
 	);
 }

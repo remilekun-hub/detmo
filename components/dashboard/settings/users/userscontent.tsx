@@ -113,7 +113,10 @@ export const usersColumn: ColumnDef<usersTabData>[] = [
 									</Button>
 								</DialogClose>
 
-								<Button className="font-[400] px-14"variant={'destructive'}>
+								<Button
+									className="font-[400] px-14"
+									variant={"default"}
+								>
 									Delete
 								</Button>
 							</div>

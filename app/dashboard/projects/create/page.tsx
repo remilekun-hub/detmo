@@ -13,8 +13,9 @@ const CreateProject: FC<Props> = ({}) => {
 					</h1>
 				</div>
 
-				<Createprojectform />
+				
 			</div>
+			<Createprojectform />
 		</section>
 	);
 };
