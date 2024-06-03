@@ -139,7 +139,7 @@ export default function Createprojectform() {
 											className="text-[#BFBFBF] py-7 bg-[hsl(0,0%,96%)]"
 											// disabled
 										>
-											Dual Sourcing
+											New Product Introduction
 										</Button>
 									</div>
 								</FormItem>
