@@ -237,7 +237,7 @@ const Evaluate: FC<Props> = ({}) => {
 					Heater Pump Sourcing
 				</h1>
 
-				{/* <main className="bg-transparent w-full h-full grid  grid-cols-1 gap-4">
+				<main className="bg-transparent w-full h-full grid  grid-cols-1 gap-4">
 					<div className="rounded-[12px] bg-white p-4 py-6 md:p-5 lg:p-6 xl:px-9 ">
 						<Step />
 						<hr />
@@ -261,7 +261,7 @@ const Evaluate: FC<Props> = ({}) => {
 							<Addsupplier />
 						</div>
 					</div>
-				</main> */}
+				</main>
 			</div>
 
 			<div className="bg-white pb-7 flex items-center flex-wrap justify-center sm:justify-end gap-5 px-4 md:pr-6 mt-6">
