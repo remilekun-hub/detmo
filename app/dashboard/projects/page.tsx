@@ -191,7 +191,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 
 			<h1 className="mt-4 mb-7 text-[32px] font-[700]">All Projects</h1>
 
-			<main className="bg-transparent w-full h-full">
+			{/* <main className="bg-transparent w-full h-full">
 				{data > 0 ? (
 					<DataTable
 						columns={proectColumn}
@@ -220,7 +220,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 						</div>
 					</div>
 				)}
-			</main>
+			</main> */}
 		</div>
 	);
 };
