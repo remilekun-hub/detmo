@@ -21,7 +21,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 	const data = 1;
 	const proectColumn: ColumnDef<projectType>[] = [
 		{
-			accessorKey: "date",
+			accessorKey: "name",
 			header: () => {
 				return (
 					<div className="text-[14px] font-[700] text-[#8A8A8A] pl-8">
@@ -32,14 +32,16 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			cell: ({ row }) => {
 				const data = row.original;
 				return (
-					<div className="pl-8">
-						<h1 className="text-[#121212] font-[700] text-[15px] mb-1">
-							{data.name}
-						</h1>
-						<p className="text-[12px] font-[400] text-[#8A8A8A]">
-							{data.createdat}
-						</p>
-					</div>
+					<Link href={`/dashboard/projects/${data.id}`}>
+						<div className="pl-8">
+							<h1 className="text-[#121212] font-[700] text-[15px] mb-1">
+								{data.name}
+							</h1>
+							<p className="text-[12px] font-[400] text-[#8A8A8A]">
+								{data.createdat}
+							</p>
+						</div>
+					</Link>
 				);
 			},
 		},
@@ -54,24 +56,27 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			},
 			cell: ({ row }) => {
 				const data = row.original;
+
 				return (
-					<div className="">
-						{data.status === "red" && (
-							<button className="bg-[#FDE7ED] text-[#C24E6A] text-[13px] font-[500] outline-none px-6 py-2.5 rounded-[8px]">
-								Initiation
-							</button>
-						)}
-						{data.status === "green" && (
-							<button className="bg-[#F0FEE7] text-[#7CC44E] text-[13px] font-[500] outline-none px-6 py-2.5 rounded-[8px]">
-								Planning
-							</button>
-						)}
-						{data.status === "yellow" && (
-							<button className="bg-[#FDF8E7] text-[#C2A84E] text-[13px] font-[500] outline-none px-6 py-2.5 rounded-[8px]">
-								Initiative
-							</button>
-						)}
-					</div>
+					<Link href={`/dashboard/projects/${data.id}`}>
+						<div className="">
+							{data.status === "red" && (
+								<button className="bg-[#FDE7ED] text-[#C24E6A] text-[13px] font-[500] outline-none px-6 py-2.5 rounded-[8px]">
+									Initiation
+								</button>
+							)}
+							{data.status === "green" && (
+								<button className="bg-[#F0FEE7] text-[#7CC44E] text-[13px] font-[500] outline-none px-6 py-2.5 rounded-[8px]">
+									Planning
+								</button>
+							)}
+							{data.status === "yellow" && (
+								<button className="bg-[#FDF8E7] text-[#C2A84E] text-[13px] font-[500] outline-none px-6 py-2.5 rounded-[8px]">
+									Initiative
+								</button>
+							)}
+						</div>
+					</Link>
 				);
 			},
 		},
@@ -88,9 +93,11 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			cell: ({ row }) => {
 				const data = row.original;
 				return (
-					<div className="font-[600] text-[15px] text-[#3B3C41]">
-						{data.cost}
-					</div>
+					<Link href={`/dashboard/projects/${data.id}`}>
+						<div className="font-[600] text-[15px] text-[#3B3C41]">
+							{data.cost}
+						</div>
+					</Link>
 				);
 			},
 		},
@@ -106,9 +113,11 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			cell: ({ row }) => {
 				const data = row.original;
 				return (
-					<div className="font-[500] text-[15px] text-[#3B3C41]">
-						{data.affected}
-					</div>
+					<Link href={`/dashboard/projects/${data.id}`}>
+						<div className="font-[500] text-[15px] text-[#3B3C41]">
+							{data.affected}
+						</div>
+					</Link>
 				);
 			},
 		},
@@ -124,14 +133,16 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			cell: ({ row }) => {
 				const data = row.original;
 				return (
-					<div>
-						<h1 className="text-[#3B3C41] font-[600] text-[14px] mb-1">
-							{data.part}
-						</h1>
-						<p className="text-[14px] font-[400] text-[#8A8A8A]">
-							{data.description}
-						</p>
-					</div>
+					<Link href={`/dashboard/projects/${data.id}`}>
+						<div>
+							<h1 className="text-[#3B3C41] font-[600] text-[14px] mb-1">
+								{data.part}
+							</h1>
+							<p className="text-[14px] font-[400] text-[#8A8A8A]">
+								{data.description}
+							</p>
+						</div>
+					</Link>
 				);
 			},
 		},
@@ -147,28 +158,30 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			cell: ({ row }) => {
 				const data = row.original;
 				return (
-					<div className="font-[400] text-[14px] text-[#3B3C41]">
-						{data.sponsor}
-					</div>
-				);
-			},
-		},
-		{
-			id: "actions",
-			enableHiding: false,
-			cell: ({ row }) => {
-				const data = row.original;
-
-				return (
-					<Link
-						href={`/dashboard/projects/${data.id}`}
-						className="text-[14px] font-[500] text-[#3B3C41]"
-					>
-						Details
+					<Link href={`/dashboard/projects/${data.id}`}>
+						<div className="font-[400] text-[14px] text-[#3B3C41]">
+							{data.sponsor}
+						</div>
 					</Link>
 				);
 			},
 		},
+		// {
+		// 	id: "actions",
+		// 	enableHiding: false,
+		// 	cell: ({ row }) => {
+		// 		const data = row.original;
+
+		// 		return (
+		// 			<Link
+		// 				href={`/dashboard/projects/${data.id}`}
+		// 				// className="text-[14px] font-[500] text-[#3B3C41]"
+		// 			>
+		// 				Details
+		// 			</Link>
+		// 		);
+		// 	},
+		// },
 	];
 	return (
 		<div className="bg-[#F6F6F6] p-4 lg:gap-6 lg:p-6 min-h-screen w-full">
