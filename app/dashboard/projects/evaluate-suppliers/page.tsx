@@ -8,18 +8,18 @@ import {
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { FC } from "react";
-import Step from "@/components/dashboard/project/singleproject/step";
 import Cards from "@/components/dashboard/project/evaluate/cards";
 import { DataTable } from "@/components/datatable";
 import { ColumnDef } from "@tanstack/react-table";
 import { supplierEvaluationType, suplierEvaluation } from "@/data/projects";
 import Addsupplier from "@/components/dashboard/project/evaluate/addsupplier";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface Props {}
 
 const Evaluate: FC<Props> = ({}) => {
+	const router = useRouter();
 	const supplierColumn: ColumnDef<supplierEvaluationType>[] = [
 		{
 			accessorKey: "name",
@@ -271,14 +271,21 @@ const Evaluate: FC<Props> = ({}) => {
 				>
 					Cancel
 				</Button>
-				<Link href="/dashboard/projects/create">
+				{/* <Link href="/dashboard/projects/create">
 					<Button
 						variant={"outline"}
 						className="h-[38px] border-primary text-[14px] text-primary font-[500]"
 					>
 						Edit project information
 					</Button>
-				</Link>
+				</Link> */}
+				<Button
+					variant={"outline"}
+					className="h-[38px] border-primary text-[14px] text-primary font-[500]"
+					onClick={() => router.back()}
+				>
+					Edit project information
+				</Button>
 				<Button
 					variant={"outline"}
 					className="h-[38px] border-primary text-[14px] text-primary font-[500]"
