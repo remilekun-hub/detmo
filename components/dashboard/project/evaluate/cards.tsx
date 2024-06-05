@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 interface Props {}
 const Cards: FC<Props> = ({}) => {
 	return (
-		<div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-5 xl:grid-cols-4 mt-8">
+		<div className="grid grid-cols-1 sm:grid-cols-2 gap-5 xl:grid-cols-4 ">
 			
 			<Card className="w-full border-0 bg-[#F6F6F6] rounded-[8px]">
 				<CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">

@@ -1,11 +1,19 @@
+import { PencilLine } from "lucide-react";
+import Link from "next/link";
 import { FC } from "react";
 
 interface Props {}
 const SourcingTeam: FC<Props> = ({}) => {
 	return (
 		<div className="rounded-[12px] bg-white p-4 md:p-5 lg:p-6 xl:px-9">
-			<h1 className="pb-6 text-[20px] font-[700] text-[#121212]">
-				Sourcing Comments
+			<h1 className="pb-6 text-[20px] font-[700] text-[#121212] flex items-center justify-between">
+				Sourcing team{" "}
+				<span className="ml-3">
+					{" "}
+					<Link href={"/dashboard/projects/1/edit"}>
+						<PencilLine className="text-primary" strokeWidth={"1"} />
+					</Link>
+				</span>
 			</h1>
 			<hr />
 			<div className="pt-6">

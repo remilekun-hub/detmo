@@ -44,7 +44,7 @@ export default function Addsupplier() {
 					<DialogHeader>
 						<DialogTitle className="font-[500]">Add Supplier</DialogTitle>
 						<DialogDescription className="font-[500]">
-							Fill this form to add a supplier
+							Add a supplier and provide ratings for supplier attributes
 						</DialogDescription>
 					</DialogHeader>
 					<Form {...form}>
@@ -68,20 +68,20 @@ export default function Addsupplier() {
 											<SelectValue placeholder="Choose a location" />
 										</SelectTrigger>
 										<SelectContent>
-											<SelectItem value="1 - intercontinental">
-												1 - intercontinental
+											<SelectItem value="1 - Intercontinental">
+												1 - Intercontinental
 											</SelectItem>
-											<SelectItem value="2 - international">
-												2 - international
+											<SelectItem value="2 - International">
+												2 - International
 											</SelectItem>
-											<SelectItem value="3 - interstate/province">
-												3 - interstate/province
+											<SelectItem value="3 - Interstate/province">
+												3 - Interstate/province
 											</SelectItem>
-											<SelectItem value="4 - intercounty">
-												4 - intercounty
+											<SelectItem value="4 - Intercounty">
+												4 - Intercounty
 											</SelectItem>
-											<SelectItem value="5 - intercity">
-												5 - intercity
+											<SelectItem value="5 - Intercity">
+												5 - Intercity
 											</SelectItem>
 										</SelectContent>
 									</Select>
@@ -142,7 +142,7 @@ export default function Addsupplier() {
 								</FormItem>
 								<FormItem>
 									<FormLabel className="text-[14px] sm:text-[16px] font-[500]">
-										Non critical parts
+										Non-critical parts
 									</FormLabel>
 									<Select>
 										<SelectTrigger className="w-full h-[45px] bg-[#F6F6F6]">
@@ -223,11 +223,11 @@ export default function Addsupplier() {
 								</FormItem>
 								<FormItem>
 									<FormLabel className="text-[14px] sm:text-[16px] font-[500]">
-										Supplier Health (Part Acceptance)
+										Part Acceptance rate
 									</FormLabel>
 									<Select>
 										<SelectTrigger className="w-full h-[45px] bg-[#F6F6F6]">
-											<SelectValue placeholder="Choose supplier health" />
+											<SelectValue placeholder="Choose part acceptance rate" />
 										</SelectTrigger>
 										<SelectContent>
 											<SelectItem value="1 - 0 - 20%">
@@ -250,11 +250,11 @@ export default function Addsupplier() {
 								</FormItem>
 								<FormItem>
 									<FormLabel className="text-[14px] sm:text-[16px] font-[500]">
-										Order Fuffilment rate
+										Order Fulfillment rate
 									</FormLabel>
 									<Select>
 										<SelectTrigger className="w-full h-[45px] bg-[#F6F6F6]">
-											<SelectValue placeholder="Choose supplier health" />
+											<SelectValue placeholder="Choose fulfillment rate" />
 										</SelectTrigger>
 										<SelectContent>
 											<SelectItem value="1 - 0 - 20%">

@@ -30,7 +30,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Plus } from "lucide-react";
 import Link from "next/link";
 
-export default function Createprojectform() {
+export default function Editprojectform() {
 	const [sourcingTeam, setSourcingTeam] = useState(false);
 	const formSchema = z.object({
 		name: z.string().min(1, {

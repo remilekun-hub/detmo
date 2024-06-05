@@ -15,6 +15,7 @@ import { ColumnDef } from "@tanstack/react-table";
 import { supplierEvaluationType, suplierEvaluation } from "@/data/projects";
 import Addsupplier from "@/components/dashboard/project/evaluate/addsupplier";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface Props {}
 
@@ -215,6 +216,7 @@ const Evaluate: FC<Props> = ({}) => {
 								Home
 							</BreadcrumbLink>
 						</BreadcrumbItem>
+						<BreadcrumbSeparator />
 						<BreadcrumbItem>
 							<BreadcrumbLink
 								href="/dashboard/projects"
@@ -238,18 +240,16 @@ const Evaluate: FC<Props> = ({}) => {
 				</h1>
 
 				<main className="bg-transparent w-full h-full grid  grid-cols-1 gap-4">
-					<div className="rounded-[12px] bg-white p-4 py-6 md:p-5 lg:p-6 xl:px-9 ">
-						<Step />
-						<hr />
+					<div className="rounded-[12px] bg-white p-4  xl:px-9 py-10">
 						<Cards />
 					</div>
 					<div>
 						<div className="rounded-[12px] bg-white p-4 md:p-5 lg:p-6 xl:px-9 sm">
 							<h1 className="pb-2 text-[20px] font-[700] text-[#121212]">
-								New Supplier Evaluation
+								Supplier Evaluation
 							</h1>
 							<p className="text-[14px] font-[400] text-[#8A8A8A]">
-								This is the description for the table description
+								Evaluate suppliers for sourcing.
 							</p>
 
 							<div className="pt-6">
@@ -271,17 +271,19 @@ const Evaluate: FC<Props> = ({}) => {
 				>
 					Cancel
 				</Button>
+				<Link href="/dashboard/projects/create">
+					<Button
+						variant={"outline"}
+						className="h-[38px] border-primary text-[14px] text-primary font-[500]"
+					>
+						Edit project information
+					</Button>
+				</Link>
 				<Button
 					variant={"outline"}
 					className="h-[38px] border-primary text-[14px] text-primary font-[500]"
 				>
-					Edit project information
-				</Button>
-				<Button
-					variant={"outline"}
-					className="h-[38px] border-primary text-[14px] text-primary font-[500]"
-				>
-					Update supplier rating information
+					Show results
 				</Button>
 				<Button
 					variant={"default"}

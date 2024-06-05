@@ -25,6 +25,7 @@ const SingleProject: FC<Props> = ({}) => {
 							Home
 						</BreadcrumbLink>
 					</BreadcrumbItem>
+					<BreadcrumbSeparator />
 					<BreadcrumbItem>
 						<BreadcrumbLink
 							href="/dashboard/projects"
@@ -48,9 +49,7 @@ const SingleProject: FC<Props> = ({}) => {
 			</h1>
 
 			<main className="bg-transparent w-full h-full grid  grid-cols-1 gap-4 sm:grid-cols-2">
-				<div className="rounded-[12px] bg-white p-4 py-6 md:p-5 lg:p-6 xl:px-9 sm:col-span-2">
-					<Step />
-					<hr />
+				<div className="rounded-[12px] bg-white p-4 py-10 sm:col-span-2 xl:px-9">
 					<Cards />
 				</div>
 				<div>
