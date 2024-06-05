@@ -27,10 +27,12 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Plus } from "lucide-react";
+import { CalendarIcon, Plus } from "lucide-react";
 import Link from "next/link";
+import { Popover, PopoverTrigger } from "@/components/ui/popover";
 
 export default function Createprojectform() {
+	const [date, setDate] = React.useState<Date>()
 	const [sourcingTeam, setSourcingTeam] = useState(false);
 	const formSchema = z.object({
 		name: z.string().min(1, {
@@ -153,7 +155,9 @@ export default function Createprojectform() {
 											onDateChange={() => {}}
 											placeholder="dd/mm/yyyy"
 											style="w-full h-[45px]"
+									
 										/>
+										
 									</FormItem>
 									<FormItem className="w-full sm:w-1/2">
 										<FormLabel className="text-[15px] sm:text-[16px] md:text-[17px] font-[700]">
@@ -163,6 +167,7 @@ export default function Createprojectform() {
 											onDateChange={() => {}}
 											placeholder="dd/mm/yyyy"
 											style="w-full h-[45px]"
+						
 										/>
 									</FormItem>
 								</div>
