@@ -36,10 +36,11 @@ const Comments: FC<Props> = ({}) => {
 			message: "Confirm, I will be there",
 			time: "1 month ago",
 		},
+		
 	];
 
 	return (
-		<div className="rounded-[12px] bg-white p-4 md:p-5 lg:p-6 xl:px-9">
+		<div className="rounded-[12px] bg-white p-4 md:p-5 lg:p-6 xl:px-9 h-full">
 			<h1 className="pb-6 text-[20px] font-[700] text-[#121212]">
 				Project Comments
 			</h1>
@@ -48,7 +49,7 @@ const Comments: FC<Props> = ({}) => {
 				{chats.map((chat) => (
 					<div
 						key={chat.id}
-						className="flex items-start gap-2 sm:gap-4 mb-4"
+						className="flex items-start gap-2 sm:gap-4 mb-5"
 					>
 						<div>
 							<Image src={avatar} alt="user" className="size-10" />
@@ -69,7 +70,7 @@ const Comments: FC<Props> = ({}) => {
 					</div>
 				))}
 			</div>
-			<div className="mt-6">
+			<div className="mt-4 pb-10">
 				<Textarea
 					placeholder="Write a message"
 					className="bg-[#F6F6F6] text-[14px] font-[400] py-4 text-[#8A8A8A] mb-4"

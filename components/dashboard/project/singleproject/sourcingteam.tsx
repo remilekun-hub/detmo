@@ -5,7 +5,7 @@ import { FC } from "react";
 interface Props {}
 const SourcingTeam: FC<Props> = ({}) => {
 	return (
-		<div className="rounded-[12px] bg-white p-4 md:p-5 lg:p-6 xl:px-9">
+		<div className="rounded-[12px] bg-white p-4 md:p-5 lg:p-6 xl:px-9 mb-4">
 			<h1 className="pb-6 text-[20px] font-[700] text-[#121212] flex items-center justify-between">
 				Sourcing team{" "}
 				<span className="ml-3">

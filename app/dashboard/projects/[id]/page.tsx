@@ -12,6 +12,7 @@ import Cards from "@/components/dashboard/project/singleproject/cards";
 import Comments from "@/components/dashboard/project/singleproject/comments";
 import ProjectDets from "@/components/dashboard/project/singleproject/projectdetails";
 import SourcingTeam from "@/components/dashboard/project/singleproject/sourcingteam";
+import RatingSummary from "@/components/dashboard/project/singleproject/ratingsumary";
 
 interface Props {}
 
@@ -56,9 +57,12 @@ const SingleProject: FC<Props> = ({}) => {
 				<div>
 					<ProjectDets />
 					<SourcingTeam />
+					<RatingSummary />
 				</div>
 
-				<Comments />
+				<div className="sm:h-max">
+					<Comments />
+				</div>
 			</main>
 		</div>
 	);
