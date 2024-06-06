@@ -15,6 +15,18 @@ import { supplierEvaluationType, suplierEvaluation } from "@/data/projects";
 import Addsupplier from "@/components/dashboard/project/evaluate/addsupplier";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import {
+	Dialog,
+	DialogTrigger,
+	DialogContent,
+	DialogHeader,
+	DialogTitle,
+	DialogDescription,
+	DialogClose,
+} from "@/components/ui/dialog";
+import { Trash2 } from "lucide-react";
+import Step from "@/components/dashboard/project/singleproject/step";
+import Editsupplier from "@/components/dashboard/project/evaluate/editsupplier";
 
 interface Props {}
 
@@ -201,6 +213,59 @@ const Evaluate: FC<Props> = ({}) => {
 				);
 			},
 		},
+		{
+			id: "actions",
+			enableHiding: false,
+			cell: ({ row }) => {
+				const data = row.original;
+
+				return (
+					<div className="flex items-center gap-6">
+						<Editsupplier />
+						<Dialog>
+							<DialogTrigger asChild>
+								<button className="outline-0">
+									<Trash2
+										strokeWidth={1}
+										className="text-primary"
+										size={16}
+									/>
+								</button>
+							</DialogTrigger>
+
+							<DialogContent className="w-full sm:max-w-[425px]">
+								<DialogHeader>
+									<DialogTitle className="font-[500]">
+										Delete supplier evaluation
+									</DialogTitle>
+									<DialogDescription className="font-[500]">
+										Are you sure you want to delete this supplier
+										evaluation?
+									</DialogDescription>
+								</DialogHeader>
+								<div className="flex justify-center sm:justify-end gap-5 mt-4">
+									<DialogClose asChild>
+										<Button
+											variant={"secondary"}
+											className="font-[400] px-10"
+										>
+											Cancel
+										</Button>
+									</DialogClose>
+
+									<Button
+										className="font-[400] px-14"
+										variant={"default"}
+									>
+										Delete
+									</Button>
+								</div>
+							</DialogContent>
+						</Dialog>
+					</div>
+				);
+			},
+		},
 	];
 
 	return (
@@ -240,7 +305,8 @@ const Evaluate: FC<Props> = ({}) => {
 				</h1>
 
 				<main className="bg-transparent w-full h-full grid  grid-cols-1 gap-4">
-					<div className="rounded-[12px] bg-white p-4  xl:px-9 py-10">
+					<div className="rounded-[12px] bg-white p-4  xl:px-9 py-6">
+						<Step />
 						<Cards />
 					</div>
 					<div>

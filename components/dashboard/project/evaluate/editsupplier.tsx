@@ -20,31 +20,27 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+import { PenLine, Plus, Trash2 } from "lucide-react";
 
-export default function Addsupplier() {
+export default function Editsupplier() {
 	const form = useForm();
 	return (
 		<div>
 			<Dialog>
 				<DialogTrigger asChild>
-					<Button
-						variant={"secondary"}
-						size={"lg"}
-						className="text-[14px] font-[600] text-[#121212] h-[44px] bg-[#EBEBEB]"
-					>
-						<span className="mr-2 border-[2px] rounded-[6px] p-0.5 border-black">
-							<Plus size={12} />
-						</span>
-						Add Supplier
-					</Button>
+					<button className="outline-0 mt-1.5">
+						<PenLine strokeWidth={1} className="text-primary" size={16} />
+					</button>
 				</DialogTrigger>
 
 				<DialogContent className="w-full max-w-[700px] h-full overflow-y-scroll md:h-auto lg:overflow-auto">
 					<DialogHeader>
-						<DialogTitle className="font-[500]">Add Supplier</DialogTitle>
+						<DialogTitle className="font-[500]">
+							{" "}
+							Edit supplier ratings
+						</DialogTitle>
 						<DialogDescription className="font-[500]">
-							Add a supplier and provide ratings for supplier attributes
+							edit a supplier and provide ratings for supplier attributes
 						</DialogDescription>
 					</DialogHeader>
 					<Form {...form}>
@@ -310,7 +306,7 @@ export default function Addsupplier() {
            
           </DialogClose> */}
 						<Button variant={"default"} className="font-[400] px-10">
-							Add supplier
+							Edit supplier
 						</Button>
 					</div>
 				</DialogContent>

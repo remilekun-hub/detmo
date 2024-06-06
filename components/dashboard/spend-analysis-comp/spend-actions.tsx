@@ -24,8 +24,8 @@ const SpendActions: FC<SpendActionsProps> = ({}) => {
           </Button>
         </div>
         <div className=" flex gap-x-4 justify-center items-center">
-          <DatePickerComponent dateValue={new Date()} onDateChange={() => {}} />
-          <DatePickerComponent dateValue={new Date()} onDateChange={() => {}} />
+          <DatePickerComponent dateValue={new Date()} onDateChange={() => {}} icon/>
+          <DatePickerComponent dateValue={new Date()} onDateChange={() => {}} icon/>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 interface Props {}
 const Step: FC<Props> = ({}) => {
 	return (
-		<div className="pb-6 pt-2 text-[20px] font-[700] text-[#121212] flex items-center xl:justify-between flex-wrap gap-3 gap-y-4">
+		<div className="pb-5 text-[20px] font-[700] text-[#121212] flex items-center xl:justify-between flex-wrap gap-3 gap-y-4">
 			<div className="text-black flex items-center text-[15px] font-[400]">
 				<span className="flex justify-center items-center bg-[#7CC44E] size-6 rounded-full mr-3">
 					<Check color="#fff" size={18} stroke-width={2.5} />

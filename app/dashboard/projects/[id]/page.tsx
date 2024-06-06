@@ -49,7 +49,8 @@ const SingleProject: FC<Props> = ({}) => {
 			</h1>
 
 			<main className="bg-transparent w-full h-full grid  grid-cols-1 gap-4 sm:grid-cols-2">
-				<div className="rounded-[12px] bg-white p-4 py-10 sm:col-span-2 xl:px-9">
+				<div className="rounded-[12px] bg-white p-4 py-6 sm:col-span-2 xl:px-9">
+					<Step />
 					<Cards />
 				</div>
 				<div>
