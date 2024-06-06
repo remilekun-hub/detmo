@@ -16,7 +16,7 @@ export default function Sidebar() {
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <Link href="/" className="flex items-center gap-2 font-semibold">
-              <Image src="/logo.svg" alt="logo" width={100} height={100} />
+              <Image src="/logo.svg" alt="logo" width={170} height={100} />
             </Link>
           </div>
           <div className="flex-1">

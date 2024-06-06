@@ -13,10 +13,10 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
-    <footer className=" border-t bg-background">
+    <footer className="bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-8 md:flex md:items-center md:justify-between">
-          <Image src="/logo.svg" alt="logo" width={100} height={100} />
+          <Image src="/logo.svg" alt="logo" width={170} height={100} />
 
           <div className="flex mt-8 space-x-6 md:mt-0 md:hidden">
             {/* social accounts */}

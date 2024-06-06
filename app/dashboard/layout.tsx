@@ -48,7 +48,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
 									<Image
 										src="/logo.svg"
 										alt="logo"
-										width={100}
+										width={170}
 										height={100}
 									/>
 								</Link>

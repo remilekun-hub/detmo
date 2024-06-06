@@ -48,7 +48,7 @@ const Comments: FC<Props> = ({}) => {
 				{chats.map((chat) => (
 					<div
 						key={chat.id}
-						className="flex items-start gap-2 sm:gap-4 mb-7"
+						className="flex items-start gap-2 sm:gap-4 mb-4"
 					>
 						<div>
 							<Image src={avatar} alt="user" className="size-10" />
@@ -69,7 +69,7 @@ const Comments: FC<Props> = ({}) => {
 					</div>
 				))}
 			</div>
-			<div>
+			<div className="mt-6">
 				<Textarea
 					placeholder="Write a message"
 					className="bg-[#F6F6F6] text-[14px] font-[400] py-4 text-[#8A8A8A] mb-4"

@@ -284,8 +284,8 @@ export default function Addsupplier() {
 											<SelectValue placeholder="Choose average amount" />
 										</SelectTrigger>
 										<SelectContent>
-											<SelectItem value="1 - NO R&D">
-												1 0% - 20%
+											<SelectItem value="1 - No R&D">
+												1 - No R&D
 											</SelectItem>
 											<SelectItem value="2 - 0 - 100k">
 												2 - 0 - 100k
