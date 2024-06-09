@@ -12,7 +12,7 @@ const SpendActions: FC<SpendActionsProps> = ({}) => {
 			<h1 className=" md:text-3xl sm:text-2xl text-xl font-medium">
 				Spend Analysis{" "}
 			</h1>
-			<div className="flex gap-6 md:flex-row flex-col">
+			<div className="flex gap-6 md:flex-row flex-col flex-wrap">
 				<div className=" flex gap-x-4 justify-center items-center">
 					<Button
 						variant={"secondary"}

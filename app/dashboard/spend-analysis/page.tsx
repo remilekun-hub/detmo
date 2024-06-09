@@ -226,7 +226,7 @@ const SpendAnalysis: FC<SpendAnalysisProps> = ({}) => {
 						<TreeMap />
 					</div>
 					<div className="bg-white rounded-[12px]">
-						<h2 className="text-[#8A8A8A] text-[18px] font-[400] p-5 pb-0 pt-7 pl-6">
+						<h2 className="text-[#8A8A8A] text-[18px] font-[400] p-5 pb-0 pt-7 pl-6 mb-4">
 							Spending by location
 						</h2>
 
