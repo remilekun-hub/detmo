@@ -84,7 +84,7 @@ const RatingSummary: FC<Props> = ({}) => {
 			</h1>
 			<hr />
 			<div className="pt-6">
-				<DataTable columns={supplierColumn} data={suplierEvaluation} />
+				<DataTable columns={supplierColumn} data={suplierEvaluation} infive />
 			</div>
 		</div>
 	);

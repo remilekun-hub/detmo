@@ -39,9 +39,10 @@ import { cn } from "@/lib/utils";
 interface DataTableProps<TData, TValue> {
 	columns: ColumnDef<TData, TValue>[];
 	data: TData[];
-	rowStyle?:string
-	headerStyle?:string,
-	buttonWrapper?:string
+	rowStyle?: string;
+	headerStyle?: string;
+	buttonWrapper?: string;
+	infive?: boolean;
 }
 
 export function DataTable<TData, TValue>({
@@ -50,12 +51,19 @@ export function DataTable<TData, TValue>({
 	rowStyle,
 	headerStyle,
 	buttonWrapper,
+	infive,
 }: DataTableProps<TData, TValue>) {
 	const table = useReactTable({
 		data,
 		columns,
 		getCoreRowModel: getCoreRowModel(),
 		getPaginationRowModel: getPaginationRowModel(), //load client-side pagination code
+		initialState: {
+			pagination: {
+				//custom initial page index
+				pageSize: infive ? 5 : 10, //custom default page size
+			},
+		},
 	});
 
 	const handleChange = (value: string) => {
@@ -64,7 +72,12 @@ export function DataTable<TData, TValue>({
 	return (
 		<div className="">
 			<Table>
-				<TableHeader className={cn('bg-[#F6F6F6] h-[34px]', headerStyle && headerStyle)}>
+				<TableHeader
+					className={cn(
+						"bg-[#F6F6F6] h-[34px]",
+						headerStyle && headerStyle
+					)}
+				>
 					{table.getHeaderGroups().map((headerGroup) => (
 						<TableRow key={headerGroup.id}>
 							{headerGroup.headers.map((header) => {
@@ -88,7 +101,7 @@ export function DataTable<TData, TValue>({
 							<TableRow
 								key={row.id}
 								data-state={row.getIsSelected() && "selected"}
-								className={cn('h-[63px]', rowStyle && rowStyle)}
+								className={cn("h-[63px]", rowStyle && rowStyle)}
 							>
 								{row.getVisibleCells().map((cell) => (
 									<TableCell key={cell.id}>
@@ -96,9 +109,6 @@ export function DataTable<TData, TValue>({
 											cell.column.columnDef.cell,
 											cell.getContext()
 										)}
-
-										
-										
 									</TableCell>
 								))}
 							</TableRow>
@@ -116,7 +126,12 @@ export function DataTable<TData, TValue>({
 				</TableBody>
 			</Table>
 
-			<div className={cn('flex items-center justify-center md:justify-end flex-wrap gap-2 my-8', buttonWrapper && buttonWrapper)}>
+			<div
+				className={cn(
+					"flex items-center justify-center md:justify-end flex-wrap gap-2 my-8",
+					buttonWrapper && buttonWrapper
+				)}
+			>
 				<Button
 					variant={"secondary"}
 					className="border rounded px-3"

@@ -109,12 +109,15 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
 					</div>
 
 					<div className="flex items-center gap-4 sm:gap-8 md:gap-9">
-						<Link href="/dashboard/projects/create" className="hidden sm:block">
+						<Link
+							href="/dashboard/projects/create"
+							className="hidden sm:block"
+						>
 							<Button size="lg" className="bg-[#6649B6]">
 								New sourcing project
 							</Button>
 						</Link>
-						<UserButton />{" "}
+						<UserButton afterSignOutUrl="/" />{" "}
 					</div>
 				</header>
 				{children}
