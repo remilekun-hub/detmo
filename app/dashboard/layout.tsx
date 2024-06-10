@@ -113,7 +113,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
 					</Sheet>
 					<Button
 						variant="outline"
-						className={cn('shrink-0 hidden transition-[transform_display] ', 			isOpen ? "scale-0 hidden" : "scale-100 flex")}
+						className={cn('shrink-0 hidden transition-[transform_display]', 			isOpen ? "scale-0 hidden" : "scale-100 flex delay-500")}
 						onClick={() => {
 							if (isOpen) {
 								onClose();
@@ -126,7 +126,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
 					<div
 						className={cn(
 							"h-14 items-center border-b lg:h-[60px] transition-[transform_display] ",
-							isOpen ? "scale-0 hidden" : "scale-100 flex"
+							isOpen ? "scale-0 hidden" : "scale-100 flex delay-500"
 						)}
 					>
 						<Link
