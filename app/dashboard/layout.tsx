@@ -111,7 +111,24 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
 							</div>
 						</SheetContent>
 					</Sheet>
-					<div className={cn('h-14 items-center border-b lg:h-[60px] transition-[transform_display] ', isOpen ? "scale-0 hidden" : "scale-100 flex")}>
+					<Button
+						variant="outline"
+						className={cn('shrink-0 hidden transition-[transform_display] ', 			isOpen ? "scale-0 hidden" : "scale-100 flex")}
+						onClick={() => {
+							if (isOpen) {
+								onClose();
+							} else onOpen();
+						}}
+					>
+						<Menu className="h-5 w-5" />
+						<span className="sr-only">Toggle navigation menu</span>
+					</Button>
+					<div
+						className={cn(
+							"h-14 items-center border-b lg:h-[60px] transition-[transform_display] ",
+							isOpen ? "scale-0 hidden" : "scale-100 flex"
+						)}
+					>
 						<Link
 							href="/dashboard/spend-analysis"
 							className="flex items-center gap-2 font-semibold"
@@ -124,19 +141,6 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
 							/>
 						</Link>
 					</div>
-
-					<Button
-						variant="outline"
-						className="shrink-0 hidden lg:block"
-						onClick={() => {
-							if (isOpen) {
-								onClose();
-							} else onOpen();
-						}}
-					>
-						<Menu className="h-5 w-5" />
-						<span className="sr-only">Toggle navigation menu</span>
-					</Button>
 
 					<div className="w-full flex-1">
 						<SearchBox />

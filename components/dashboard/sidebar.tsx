@@ -3,7 +3,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { Package, SettingsIcon } from "lucide-react";
+import { Menu, Package, SettingsIcon } from "lucide-react";
 import {
 	Card,
 	CardContent,
@@ -17,11 +17,30 @@ import { useCollapsibleStore } from "@/store/usecollapse";
 
 export default function Sidebar() {
 	const pathname = usePathname();
-	const { isOpen } = useCollapsibleStore();
+	const { isOpen, onClose, onOpen } = useCollapsibleStore();
 	return (
-		<div className={cn(' bg-muted/40 hidden lg:block h-screen fixed z-[2] transition-[all] duration-500', isOpen ? "border-r w-[280px] overflow-hidden left-0" : "w-0 -left-full")}>
+		<div
+			className={cn(
+				" bg-muted/40 hidden lg:block h-screen fixed z-[2] transition-[all] duration-500",
+				isOpen
+					? "border-r w-[280px] overflow-hidden left-0"
+					: "w-0 -left-full"
+			)}
+		>
 			<div className="flex h-full max-h-screen flex-col gap-2">
 				<div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
+					<Button
+						variant="outline"
+						className="shrink-0 hidden lg:block mr-3.5"
+						onClick={() => {
+							if (isOpen) {
+								onClose();
+							} else onOpen();
+						}}
+					>
+						<Menu className="h-5 w-5" />
+						<span className="sr-only">Toggle navigation menu</span>
+					</Button>
 					<Link href="/" className="flex items-center gap-2 font-semibold">
 						<Image src="/logo.svg" alt="logo" width={170} height={100} />
 					</Link>

@@ -18,7 +18,7 @@ import { Plus } from "lucide-react";
 interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = ({}) => {
-	const data = 1;
+	const data = 0;
 	const proectColumn: ColumnDef<projectType>[] = [
 		{
 			accessorKey: "name",
@@ -216,7 +216,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 				) : (
 					<div className="w-full h-full flex justify-center">
 						<div className="pt-14 sm:pt-[80px]">
-							<h1 className="text-[15px] font-[400] text-[#3B3C41] text-center mb-10">
+							<h1 className="text-[15px] font-[400] text-[#3B3C41] text-center mb-8">
 								There are no projects.
 							</h1>
 							<Link href={"/dashboard/projects/create"}>

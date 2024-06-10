@@ -59,3 +59,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.sidebar-height {
+  height: calc(100vh - 56px);
+}

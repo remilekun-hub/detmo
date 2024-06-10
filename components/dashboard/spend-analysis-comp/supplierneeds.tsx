@@ -2,6 +2,15 @@
 import { FC } from "react";
 import { ColumnDef } from "@tanstack/react-table";
 import { DataTable } from "@/components/datatable";
+import { Button } from "@/components/ui/button";
+import { PencilLine, SendHorizonal } from "lucide-react";
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from "@/components/ui/tooltip";
+import Link from "next/link";
 
 interface Props {}
 
@@ -41,7 +50,7 @@ export const usersTabData = [
 		location: "Corona, Michigan",
 		spend: "$35,580.00",
 	},
-  {
+	{
 		description: "Fan",
 		number: "033410403",
 		name: "Vendor1",
@@ -123,20 +132,34 @@ export const usersColumn: ColumnDef<usersTabData>[] = [
 		},
 	},
 
-	// {
-	// 	id: "actions",
-	// 	enableHiding: false,
-	// 	cell: ({ row }) => {
-	// 		const data = row.original;
+	{
+		id: "actions",
+		enableHiding: false,
+		cell: ({ row }) => {
+			const data = row.original;
 
-	// 		return (
-	// 			<div className="flex gap-6 items-center">
-	// 				<Editeuser />
-	// 				<Deleteuser />
-	// 			</div>
-	// 		);
-	// 	},
-	// },
+			return (
+				<div className="">
+					<TooltipProvider delayDuration={300}>
+						<Tooltip>
+							<TooltipTrigger>
+								<Link href={'/dashboard/projects/create'}>
+									<SendHorizonal
+										strokeWidth={1}
+										className="text-primary"
+										size={16}
+									/>
+								</Link>
+							</TooltipTrigger>
+							<TooltipContent className="">
+								Create new sourcing project <br /> for this commodity
+							</TooltipContent>
+						</Tooltip>
+					</TooltipProvider>
+				</div>
+			);
+		},
+	},
 ];
 
 const SupplierNeeds: FC<Props> = ({}) => {
