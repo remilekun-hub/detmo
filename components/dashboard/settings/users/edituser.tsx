@@ -13,6 +13,7 @@ import { FormItem, FormLabel, Form } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export default function Edituser() {
 	const form = useForm();
@@ -60,11 +61,15 @@ export default function Edituser() {
 								<FormLabel className="text-[14px] sm:text-[16px] font-[500]">
 									Permission
 								</FormLabel>
-								<Input
-									placeholder="Enter user permission"
-									type="email"
-									className="bg-[#F6F6F6] rounded-[8px] h-[45px]"
-								/>
+								<Select>
+									<SelectTrigger className="w-full h-[40px] bg-[#F6F6F6]">
+										<SelectValue placeholder="Select permission" />
+									</SelectTrigger>
+									<SelectContent>
+										<SelectItem value="Admin">Admin</SelectItem>
+										<SelectItem value="User">User</SelectItem>
+									</SelectContent>
+								</Select>
 							</FormItem>
 							<div className="flex justify-end gap-5 mt-5">
 								<DialogClose asChild>
@@ -76,9 +81,7 @@ export default function Edituser() {
 									</Button>
 								</DialogClose>
 
-								<Button className="font-[400] px-14">
-									Save
-								</Button>
+								<Button className="font-[400] px-14">Save</Button>
 							</div>
 						</form>
 					</Form>
