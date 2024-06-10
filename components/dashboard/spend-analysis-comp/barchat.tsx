@@ -104,7 +104,7 @@ const Barchat: FC<props> = ({}) => {
 						}
 						stroke="#BFBFBF"
 					/>
-					<Tooltip />
+					<Tooltip cursor={{fill: 'transparent'}} />
 					<Bar
 						dataKey="amount"
 						fill="#8861F3"

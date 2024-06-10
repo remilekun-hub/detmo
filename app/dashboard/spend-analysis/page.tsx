@@ -234,7 +234,7 @@ const SpendAnalysis: FC<SpendAnalysisProps> = ({}) => {
 					</div>
 					<div className="col-span-1 sm:col-span-2 bg-white rounded-[12px]">
 						<h2 className="text-[#8A8A8A] text-[18px] font-[400] p-5 pt-7 pl-6">
-							Top Supplier spendson
+							Top Supplier spend
 						</h2>
 						<SupplierNeeds />
 					</div>

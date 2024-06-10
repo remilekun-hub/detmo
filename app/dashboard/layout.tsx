@@ -19,15 +19,22 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Sidebar from "@/components/dashboard/sidebar";
 import { Toaster } from "react-hot-toast";
+import { useCollapsibleStore } from "@/store/usecollapse";
 
 export default function Dashboard({ children }: { children: React.ReactNode }) {
 	const pathname = usePathname();
+	const { isOpen, onOpen, onClose } = useCollapsibleStore();
 
 	return (
 		<section className="relative">
 			<Sidebar />
 
-			<main className="flex flex-1 flex-col lg:ml-[280px]">
+			<main
+				className={cn(
+					"flex flex-1 flex-col transition-[margin-left] duration-500 delay-0 ease-in-out",
+					isOpen ? "lg:ml-[280px]" : "lg:ml-0"
+				)}
+			>
 				<Toaster />
 
 				<header className="flex h-14 items-center gap-4 border-b bg-white px-4 lg:h-[60px] lg:px-6 sticky top-0 z-[3]">
@@ -104,6 +111,33 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
 							</div>
 						</SheetContent>
 					</Sheet>
+					<div className={cn('h-14 items-center border-b lg:h-[60px] transition-[transform_display] ', isOpen ? "scale-0 hidden" : "scale-100 flex")}>
+						<Link
+							href="/dashboard/spend-analysis"
+							className="flex items-center gap-2 font-semibold"
+						>
+							<Image
+								src="/logo.svg"
+								alt="logo"
+								width={170}
+								height={100}
+							/>
+						</Link>
+					</div>
+
+					<Button
+						variant="outline"
+						className="shrink-0 hidden lg:block"
+						onClick={() => {
+							if (isOpen) {
+								onClose();
+							} else onOpen();
+						}}
+					>
+						<Menu className="h-5 w-5" />
+						<span className="sr-only">Toggle navigation menu</span>
+					</Button>
+
 					<div className="w-full flex-1">
 						<SearchBox />
 					</div>

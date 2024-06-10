@@ -322,6 +322,7 @@ const Evaluate: FC<Props> = ({}) => {
 								<DataTable
 									columns={supplierColumn}
 									data={suplierEvaluation}
+									rowStyle="text-center"
 								/>
 							</div>
 							<Addsupplier />

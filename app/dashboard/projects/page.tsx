@@ -25,7 +25,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
 			header: () => {
 				return (
 					<div className="text-[14px] font-[700] text-[#8A8A8A] pl-8">
-						Project name
+						Project Name
 					</div>
 				);
 			},
