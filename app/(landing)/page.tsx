@@ -225,13 +225,14 @@ const page: FC<pageProps> = ({}) => {
 			{/* footer hero section */}
 			<div className="bg-muted w-full py-10">
 				<section className="flex flex-col justify-center md:p-3 p-2 container max-w-screen-md  text-center  gap-5 ">
-				
-          <h1 className="max-w-[740px] mx-auto text-center text-3xl md:text-4xl lg:text-5xl font-bold text-wrap md:px-4 lg:leading-[60px]">
+					<h1 className="max-w-[740px] mx-auto text-center text-3xl md:text-4xl lg:text-5xl font-bold text-wrap md:px-4 lg:leading-[60px]">
 						Experience Next-Level Procurement Efficiency!{" "}
 					</h1>
 
 					<div className="flex justify-center items-center gap-3">
-						<Button size="lg"> Start Free Trial</Button>
+						<Button size="lg" asChild>
+							<Link href={"/sign-in"}>Start Free Trial</Link>
+						</Button>
 					</div>
 				</section>
 			</div>

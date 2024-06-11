@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { Menu, Package, SettingsIcon } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -162,8 +161,4 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
 			</main>
 		</section>
 	);
-}
-
-{
-	/* <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr] relative"> */
 }
