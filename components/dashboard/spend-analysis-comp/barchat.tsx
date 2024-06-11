@@ -49,22 +49,12 @@ const Barchat: FC<props> = ({}) => {
 			name: "vendor9",
 			amount: 30000000,
 		},
-		// {
-		// 	name: "vendor10",
-		// 	amount: 35000000,
-		// },
+		{
+			name: "vendor10",
+			amount: 35000000,
+		},
 	];
-	const tickFormater = (number: number) => {
-		if (number > 1000000000) {
-			return (number / 1000000000).toString() + "B";
-		} else if (number > 1000000) {
-			return (number / 1000000).toString() + "M";
-		} else if (number > 1000) {
-			return (number / 1000).toString() + "K";
-		} else {
-			return number.toString();
-		}
-	};
+
 
 
 	const  CustomizedAxisTick = (tick:any)=> {
@@ -91,6 +81,7 @@ const Barchat: FC<props> = ({}) => {
 						dataKey="name"
 						tick={CustomizedAxisTick}
 						stroke="#BFBFBF"
+						interval={0}
 						
 					/>
 					<YAxis
