@@ -27,6 +27,7 @@ import {
 import { Trash2 } from "lucide-react";
 import Step from "@/components/dashboard/project/singleproject/step";
 import Editsupplier from "@/components/dashboard/project/evaluate/editsupplier";
+import Link from "next/link";
 
 interface Props {}
 
@@ -335,24 +336,27 @@ const Evaluate: FC<Props> = ({}) => {
 				<Button
 					variant={"secondary"}
 					className="h-[38px] text-[14px] font-[500] px-10"
+					asChild
 				>
-					Cancel
+					<Link href={"/dashboard/spend-analysis"}>Cancel</Link>
 				</Button>
-				{/* <Link href="/dashboard/projects/create">
-					<Button
-						variant={"outline"}
-						className="h-[38px] border-primary text-[14px] text-primary font-[500]"
-					>
-						Edit project information
-					</Button>
-				</Link> */}
 				<Button
+					variant={"outline"}
+					className="h-[38px] border-primary text-[14px] text-primary font-[500]"
+					asChild
+				>
+					<Link href="/dashboard/projects/create">
+						Edit project information
+					</Link>
+				</Button>
+
+				{/* <Button
 					variant={"outline"}
 					className="h-[38px] border-primary text-[14px] text-primary font-[500]"
 					onClick={() => router.back()}
 				>
 					Edit project information
-				</Button>
+				</Button> */}
 				<Button
 					variant={"outline"}
 					className="h-[38px] border-primary text-[14px] text-primary font-[500]"

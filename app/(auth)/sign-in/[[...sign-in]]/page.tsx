@@ -13,7 +13,7 @@ export default function Page() {
 				</Link>
 			</div>
 
-			<SignIn path="/sign-in" afterSignOutUrl={'/'} />
+			<SignIn path="/sign-in"/>
 		</div>
 	);
 }

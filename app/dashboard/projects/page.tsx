@@ -18,7 +18,7 @@ import { Plus } from "lucide-react";
 interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = ({}) => {
-	const data = 0;
+	const data = 1;
 	const proectColumn: ColumnDef<projectType>[] = [
 		{
 			accessorKey: "name",
